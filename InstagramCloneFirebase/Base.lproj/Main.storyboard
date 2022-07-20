@@ -102,8 +102,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOc-Pd-viw">
-                                <rect key="frame" x="150" y="379" width="115" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOc-Pd-viw">
+                                <rect key="frame" x="150" y="329" width="115" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Logout"/>
                                 <connections>
@@ -114,12 +115,6 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="L5h-XE-Ht5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="SOc-Pd-viw" firstAttribute="top" secondItem="L5h-XE-Ht5" secondAttribute="top" constant="335" id="0F0-Ea-I6R"/>
-                            <constraint firstItem="SOc-Pd-viw" firstAttribute="leading" secondItem="L5h-XE-Ht5" secondAttribute="leading" constant="150" id="1Pc-h2-rgi"/>
-                            <constraint firstItem="SOc-Pd-viw" firstAttribute="centerX" secondItem="wHe-Tp-BBw" secondAttribute="centerX" id="6dC-j6-scF"/>
-                            <constraint firstItem="L5h-XE-Ht5" firstAttribute="bottom" secondItem="SOc-Pd-viw" secondAttribute="bottom" constant="392" id="oZv-78-FnG"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="tb2-Jg-tSX"/>
                 </viewController>
@@ -146,7 +141,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="haY-es-ZPl">
             <objects>
-                <tabBarController id="YcW-24-iud" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="YcW-24-iud" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Czx-8m-0kI"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VAF-RQ-rSw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

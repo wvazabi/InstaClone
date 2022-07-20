@@ -14,13 +14,39 @@ class ViewController: UIViewController {
     @IBOutlet weak var emailText: UITextField!
     
     @IBOutlet weak var passwordText: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+
+        
+
+
+
     }
     @IBAction func signInClicked(_ sender: Any) {
-        performSegue(withIdentifier: "toFeedVC", sender: nil)
-    }
+        
+        
+        if emailText.text != "" && passwordText.text != ""{
+            Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { (autdata, errorx) in
+             
+                if errorx != nil
+                {
+                    self.alertPopUp(titleInput: "Error!", messageInput: errorx?.localizedDescription ??  "Error")
+                        
+                }else{
+                    self.performSegue(withIdentifier: "toFeedVC", sender: nil)
+                }
+            }
+        }
+        else{
+            alertPopUp(titleInput: "Error!", messageInput: "Username/Password error")
+            
+        }
+        
+                
+            }
+            
     
     @IBAction func signUpClicked(_ sender: Any) {
         
