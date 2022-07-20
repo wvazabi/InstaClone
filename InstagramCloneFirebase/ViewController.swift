@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
 
@@ -22,6 +23,34 @@ class ViewController: UIViewController {
     }
     
     @IBAction func signUpClicked(_ sender: Any) {
+        
+        if emailText.text != "" && passwordText.text != ""{
+            Auth.auth().createUser(withEmail: emailText.text!, password: passwordText.text!) { (authdata,errorx) in
+                
+                if errorx != nil
+                {
+                    self.alertPopUp(titleInput: "Error!", messageInput: errorx?.localizedDescription ??  "Error")
+                        
+                }else{
+                    self.performSegue(withIdentifier: "toFeedVC", sender: nil)
+                }
+            }
+        }
+        else{
+            alertPopUp(titleInput: "Error!", messageInput: "Username/Password error")
+            
+        }
+        
+    
+        
+        
+    }
+    
+    func alertPopUp(titleInput:String, messageInput:String){
+        let alert = UIAlertController(title: titleInput, message: messageInput, preferredStyle: UIAlertController.Style.alert)
+        let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+        alert.addAction(okButton)
+        self.present(alert, animated: true, completion: nil)
     }
     
     
