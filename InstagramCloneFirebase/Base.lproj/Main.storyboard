@@ -67,6 +67,7 @@
                             <constraint firstItem="qgn-HN-ZoY" firstAttribute="trailing" secondItem="r51-MS-n7g" secondAttribute="trailing" id="zOQ-i9-yZV"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="0nh-OO-XgL"/>
                     <connections>
                         <outlet property="emailText" destination="r51-MS-n7g" id="Td3-hz-1d3"/>
                         <outlet property="passwordText" destination="lsG-bM-Ops" id="qoN-dJ-mtW"/>
@@ -80,7 +81,7 @@
         <!--Upload-->
         <scene sceneID="ENV-i6-cC8">
             <objects>
-                <viewController id="mDW-sv-Ov3" sceneMemberID="viewController">
+                <viewController id="mDW-sv-Ov3" customClass="UploadViewController" customModule="InstagramCloneFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xib-gL-fhq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,10 +94,43 @@
             </objects>
             <point key="canvasLocation" x="1732" y="379"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="DHP-Pp-Se8">
+            <objects>
+                <viewController id="6Lh-uH-t3s" customClass="SettingsViewController" customModule="InstagramCloneFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wHe-Tp-BBw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOc-Pd-viw">
+                                <rect key="frame" x="150" y="379" width="115" height="42"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutClicked:" destination="6Lh-uH-t3s" eventType="touchUpInside" id="sU5-9c-QNJ"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="toViewControllar" modalPresentationStyle="fullScreen" id="5Mp-Vw-VP1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="L5h-XE-Ht5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SOc-Pd-viw" firstAttribute="top" secondItem="L5h-XE-Ht5" secondAttribute="top" constant="335" id="0F0-Ea-I6R"/>
+                            <constraint firstItem="SOc-Pd-viw" firstAttribute="leading" secondItem="L5h-XE-Ht5" secondAttribute="leading" constant="150" id="1Pc-h2-rgi"/>
+                            <constraint firstItem="SOc-Pd-viw" firstAttribute="centerX" secondItem="wHe-Tp-BBw" secondAttribute="centerX" id="6dC-j6-scF"/>
+                            <constraint firstItem="L5h-XE-Ht5" firstAttribute="bottom" secondItem="SOc-Pd-viw" secondAttribute="bottom" constant="392" id="oZv-78-FnG"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="tb2-Jg-tSX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FtM-jo-uV2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1731.8840579710147" y="1062.7232142857142"/>
+        </scene>
         <!--Feed-->
         <scene sceneID="pVB-hi-v3T">
             <objects>
-                <viewController id="j8q-Gj-Lp5" sceneMemberID="viewController">
+                <viewController id="j8q-Gj-Lp5" customClass="FeedViewController" customModule="InstagramCloneFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="efi-mU-Sth">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,6 +155,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="j8q-Gj-Lp5" kind="relationship" relationship="viewControllers" id="dfA-Nj-UQe"/>
+                        <segue destination="6Lh-uH-t3s" kind="relationship" relationship="viewControllers" id="wMG-q1-1gT"/>
                         <segue destination="mDW-sv-Ov3" kind="relationship" relationship="viewControllers" id="Qlt-6X-vGc"/>
                     </connections>
                 </tabBarController>
@@ -130,6 +165,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gear" catalog="system" width="128" height="119"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">

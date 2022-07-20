@@ -19,6 +19,9 @@
 		1AB20F282888789B006F8AC2 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 1AB20F272888789B006F8AC2 /* FirebaseDatabase */; };
 		1AB20F2A2888789B006F8AC2 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1AB20F292888789B006F8AC2 /* FirebaseFirestore */; };
 		1AB20F2C2888789B006F8AC2 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 1AB20F2B2888789B006F8AC2 /* FirebaseStorage */; };
+		1AB20F2E288894FA006F8AC2 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB20F2D288894F9006F8AC2 /* FeedViewController.swift */; };
+		1AB20F3028889524006F8AC2 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB20F2F28889524006F8AC2 /* UploadViewController.swift */; };
+		1AB20F3228889555006F8AC2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB20F3128889555006F8AC2 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		1A47EBD22887E862001C5679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A47EBD82887EEED001C5679 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1AB20F21288873F9006F8AC2 /* swift-package-manager-main */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "swift-package-manager-main"; path = "../../../Downloads/swift-package-manager-main"; sourceTree = "<group>"; };
+		1AB20F2D288894F9006F8AC2 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		1AB20F2F28889524006F8AC2 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		1AB20F3128889555006F8AC2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,9 @@
 				1A47EBCF2887E862001C5679 /* LaunchScreen.storyboard */,
 				1A47EBD22887E862001C5679 /* Info.plist */,
 				1A47EBD82887EEED001C5679 /* GoogleService-Info.plist */,
+				1AB20F2D288894F9006F8AC2 /* FeedViewController.swift */,
+				1AB20F2F28889524006F8AC2 /* UploadViewController.swift */,
+				1AB20F3128889555006F8AC2 /* SettingsViewController.swift */,
 			);
 			path = InstagramCloneFirebase;
 			sourceTree = "<group>";
@@ -173,8 +182,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A47EBC92887E85F001C5679 /* ViewController.swift in Sources */,
+				1AB20F3028889524006F8AC2 /* UploadViewController.swift in Sources */,
 				1A47EBC52887E85F001C5679 /* AppDelegate.swift in Sources */,
+				1AB20F2E288894FA006F8AC2 /* FeedViewController.swift in Sources */,
 				1A47EBC72887E85F001C5679 /* SceneDelegate.swift in Sources */,
+				1AB20F3228889555006F8AC2 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
