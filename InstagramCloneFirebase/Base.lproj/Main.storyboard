@@ -85,14 +85,53 @@
                     <view key="view" contentMode="scaleToFill" id="Xib-gL-fhq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="select" translatesAutoresizingMaskIntoConstraints="NO" id="WtE-P0-QoS">
+                                <rect key="frame" x="20" y="109" width="374" height="318"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="318" id="P1a-QP-aXo"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M7s-Gc-C83">
+                                <rect key="frame" x="20" y="501" width="374" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gg8-Kp-s3r">
+                                <rect key="frame" x="253" y="692" width="114" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="tHT-QY-MSL"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                                <connections>
+                                    <action selector="Button:" destination="mDW-sv-Ov3" eventType="touchUpInside" id="LSE-J3-Kj4"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="qjS-qd-bhR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WtE-P0-QoS" firstAttribute="trailing" secondItem="Xib-gL-fhq" secondAttribute="trailingMargin" id="05i-nk-vId"/>
+                            <constraint firstItem="WtE-P0-QoS" firstAttribute="leading" secondItem="M7s-Gc-C83" secondAttribute="leading" id="51b-r9-tK4"/>
+                            <constraint firstItem="qjS-qd-bhR" firstAttribute="trailing" secondItem="Gg8-Kp-s3r" secondAttribute="trailing" constant="47" id="IXp-cY-Wuk"/>
+                            <constraint firstItem="qjS-qd-bhR" firstAttribute="bottom" secondItem="Gg8-Kp-s3r" secondAttribute="bottom" constant="70" id="PuD-Tt-8ar"/>
+                            <constraint firstItem="M7s-Gc-C83" firstAttribute="top" secondItem="WtE-P0-QoS" secondAttribute="bottom" constant="74" id="Zaw-0t-8T2"/>
+                            <constraint firstItem="WtE-P0-QoS" firstAttribute="leading" secondItem="Xib-gL-fhq" secondAttribute="leadingMargin" id="eoq-Y8-3zC"/>
+                            <constraint firstItem="WtE-P0-QoS" firstAttribute="top" secondItem="qjS-qd-bhR" secondAttribute="top" constant="65" id="lMZ-b0-BMY"/>
+                            <constraint firstItem="WtE-P0-QoS" firstAttribute="trailing" secondItem="M7s-Gc-C83" secondAttribute="trailing" id="lro-IB-Ejk"/>
+                            <constraint firstItem="Gg8-Kp-s3r" firstAttribute="leading" secondItem="qjS-qd-bhR" secondAttribute="leading" constant="253" id="osL-nS-5bS"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" image="square.and.arrow.up" catalog="system" id="q3e-d8-h0t"/>
+                    <connections>
+                        <outlet property="editText" destination="M7s-Gc-C83" id="MtY-hN-il5"/>
+                        <outlet property="imageView" destination="WtE-P0-QoS" id="NXQ-Gk-lSl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cvG-mH-47g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1732" y="379"/>
+            <point key="canvasLocation" x="1731.8840579710147" y="378.34821428571428"/>
         </scene>
         <!--Settings-->
         <scene sceneID="DHP-Pp-Se8">
@@ -162,6 +201,7 @@
     <resources>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="select" width="1000" height="1080"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
