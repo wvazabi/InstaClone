@@ -24,7 +24,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     var userCommentArray = [String]()
     var likeArray = [Int]()
     var userImageArray = [String]()
-    
+    var documentIDArray = [String]()
     
     
     override func viewDidLoad() {
@@ -61,7 +61,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.userEmailLabel.text = "User: \(userEmailArray[indexPath.row])"
         cell.userImageView.sd_setImage(with: URL(string: self.userImageArray[indexPath.row]))
         cell.likeCountLabel.text = String(likeArray[indexPath.row])
-            
+        cell.documentIDLabel.text = documentIDArray[indexPath.row]
         
         return cell
     }
@@ -73,7 +73,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
        // let settings = firestoreDataBase.settings
         
-        firestoreDataBase.collection("Posts").addSnapshotListener { snapshot, error in
+        firestoreDataBase.collection("Posts").order(by: "date", descending: true).addSnapshotListener { snapshot, error in
             if error != nil {
                 self.alertPopUp(titleInput: "Error", messageInput: error?.localizedDescription ?? "Error")
             }else{
@@ -86,9 +86,12 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                     self.userCommentArray.removeAll(keepingCapacity: false)
                     self.likeArray.removeAll(keepingCapacity: false)
                     self.userImageArray.removeAll(keepingCapacity: false)
-                    
+                    self.documentIDArray.removeAll(keepingCapacity: false)
                     
                     for document in snapshot!.documents {
+                        
+                        let documentID = document.documentID
+                        self.documentIDArray.append(documentID)
                          
                         if let postedBy = document.get("postComment") as? String {
                             

@@ -213,6 +213,13 @@
                                                         <action selector="likeClickedButton:" destination="mUf-JE-083" eventType="touchUpInside" id="fGp-CF-T9z"/>
                                                     </connections>
                                                 </button>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8X-wg-HOe">
+                                                    <rect key="frame" x="344" y="0.0" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCT-i1-bEy">
                                                     <rect key="frame" x="354" y="331" width="23" height="21"/>
                                                     <constraints>
@@ -241,6 +248,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="documentIDLabel" destination="t8X-wg-HOe" id="HGF-A9-lab"/>
                                             <outlet property="likeCountLabel" destination="mCT-i1-bEy" id="Qde-E9-VEa"/>
                                             <outlet property="userComment" destination="Trm-Rb-nnA" id="MaU-rN-yyL"/>
                                             <outlet property="userEmailLabel" destination="XTu-rs-SqV" id="zN4-V3-ScM"/>
