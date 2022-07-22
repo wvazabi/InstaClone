@@ -22,7 +22,6 @@
 		1AB20F2E288894FA006F8AC2 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB20F2D288894F9006F8AC2 /* FeedViewController.swift */; };
 		1AB20F3028889524006F8AC2 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB20F2F28889524006F8AC2 /* UploadViewController.swift */; };
 		1AB20F3228889555006F8AC2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB20F3128889555006F8AC2 /* SettingsViewController.swift */; };
-		1AB20F342889FC97006F8AC2 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB20F332889FC97006F8AC2 /* FeedCell.swift */; };
 		1AB20F362889FF3F006F8AC2 /* FeedCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB20F352889FF3F006F8AC2 /* FeedCell2.swift */; };
 		1AB20F39288AAC85006F8AC2 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 1AB20F38288AAC85006F8AC2 /* SDWebImageSVGCoder */; };
 /* End PBXBuildFile section */
@@ -41,7 +40,6 @@
 		1AB20F2D288894F9006F8AC2 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		1AB20F2F28889524006F8AC2 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		1AB20F3128889555006F8AC2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		1AB20F332889FC97006F8AC2 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		1AB20F352889FF3F006F8AC2 /* FeedCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				1A47EBC42887E85F001C5679 /* AppDelegate.swift */,
-				1AB20F332889FC97006F8AC2 /* FeedCell.swift */,
 				1A47EBC62887E85F001C5679 /* SceneDelegate.swift */,
 				1A47EBC82887E85F001C5679 /* ViewController.swift */,
 				1A47EBCA2887E85F001C5679 /* Main.storyboard */,
@@ -192,7 +189,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AB20F362889FF3F006F8AC2 /* FeedCell2.swift in Sources */,
-				1AB20F342889FC97006F8AC2 /* FeedCell.swift in Sources */,
 				1A47EBC92887E85F001C5679 /* ViewController.swift in Sources */,
 				1AB20F3028889524006F8AC2 /* UploadViewController.swift in Sources */,
 				1A47EBC52887E85F001C5679 /* AppDelegate.swift in Sources */,
