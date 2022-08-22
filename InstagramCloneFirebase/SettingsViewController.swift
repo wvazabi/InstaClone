@@ -10,12 +10,20 @@ import Firebase
 
 class SettingsViewController: UIViewController {
 
+    
+    @IBOutlet weak var logoutLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func clickButton(_ sender: Any) {
+    
+        logoutLabel.text = "Button clicked"
+    }
     
     @IBAction func logoutClicked(_ sender: Any) {
         

@@ -141,9 +141,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOc-Pd-viw">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOc-Pd-viw">
                                 <rect key="frame" x="150" y="329" width="115" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="xca-Lh-e8s"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Logout"/>
                                 <connections>
@@ -151,11 +153,39 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="toViewControllar" modalPresentationStyle="fullScreen" id="5Mp-Vw-VP1"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log Out Screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aR-rh-c4Q">
+                                <rect key="frame" x="20" y="152" width="374" height="85"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKn-Df-tMj">
+                                <rect key="frame" x="156" y="441" width="103" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Click"/>
+                                <connections>
+                                    <action selector="clickButton:" destination="6Lh-uH-t3s" eventType="touchUpInside" id="PAb-uy-Fy1"/>
+                                    <action selector="logoutClicked:" destination="6Lh-uH-t3s" eventType="touchUpInside" id="SoD-uS-poG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="L5h-XE-Ht5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7aR-rh-c4Q" firstAttribute="top" secondItem="L5h-XE-Ht5" secondAttribute="top" constant="108" id="4aN-sN-drk"/>
+                            <constraint firstItem="7aR-rh-c4Q" firstAttribute="trailing" secondItem="wHe-Tp-BBw" secondAttribute="trailingMargin" id="AIj-Y2-z87"/>
+                            <constraint firstItem="7aR-rh-c4Q" firstAttribute="leading" secondItem="wHe-Tp-BBw" secondAttribute="leadingMargin" id="AaO-cU-fhW"/>
+                            <constraint firstItem="L5h-XE-Ht5" firstAttribute="bottom" secondItem="SOc-Pd-viw" secondAttribute="bottom" constant="442" id="Cyo-Qz-Qgt"/>
+                            <constraint firstItem="SOc-Pd-viw" firstAttribute="top" secondItem="7aR-rh-c4Q" secondAttribute="bottom" constant="92" id="Wli-9C-ihu"/>
+                            <constraint firstItem="7aR-rh-c4Q" firstAttribute="centerX" secondItem="SOc-Pd-viw" secondAttribute="centerX" id="eAc-1I-zIP"/>
+                            <constraint firstItem="SOc-Pd-viw" firstAttribute="leading" secondItem="L5h-XE-Ht5" secondAttribute="leading" constant="150" id="psG-3u-Sq6"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="tb2-Jg-tSX"/>
+                    <connections>
+                        <outlet property="logoutLabel" destination="7aR-rh-c4Q" id="H8z-Gs-Py2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FtM-jo-uV2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

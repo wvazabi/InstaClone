@@ -23,6 +23,8 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate & 
                let gestureRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(addPic))
                imageView.addGestureRecognizer(gestureRecognizer2)
                
+        let gestureRecognizer3 = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(gestureRecognizer3)
 
         // Do any additional setup after loading the view.
     }
@@ -44,6 +46,11 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate & 
         alert.addAction(okButton)
         self.present(alert, animated: true, completion: nil)
     }
+    
+    @objc func hideKeyboard(){
+        view.endEditing(true)
+    }
+    
     
     
     
